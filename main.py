@@ -1,6 +1,7 @@
 from tkinter import *
 
-# displayes string in entry
+# displays string in entry
+from PIL import ImageTk, Image
 
 def press(number):
     current = e.get()
@@ -17,6 +18,7 @@ def button_equal():
     e.insert(0, total)  # inserts the value in entry
 
 
+
 def clear_but():
     e.delete(0, END)  #clears the entry in the screen
 
@@ -25,11 +27,11 @@ root = Tk()
 root.configure(bg='black')
 root.title('Basic Calculator')
 
-e = Entry(root, width=30, borderwidth=2, font=('arial', 40), bg='black', fg='cyan')
+e = Entry(root, width=30, borderwidth=2, font=('arial', 20), bg='black', fg='cyan')
 e.grid(
     row=0,
     column=0,
-    columnspan=4,
+    columnspan=5,
     padx=10,
     pady=10,
     ipady=5.5,
@@ -40,6 +42,8 @@ button_1 = Button(
     root,
     text='1',
     font=('arial', 30),
+    bg="black",
+    fg= "white",
     padx=30,
     pady=15,
     command=lambda : press(1),
@@ -47,6 +51,8 @@ button_1 = Button(
 button_2 = Button(
     root,
     text='2',
+    bg="black",
+    fg= "white",
     font=('arial', 30),
     padx=30,
     pady=15,
@@ -55,6 +61,8 @@ button_2 = Button(
 button_3 = Button(
     root,
     text='3',
+    bg="black",
+    fg= "white",
     font=('arial', 30),
     padx=30,
     pady=15,
@@ -63,6 +71,8 @@ button_3 = Button(
 button_4 = Button(
     root,
     text='4',
+    bg="black",
+    fg= "white",
     font=('arial', 30),
     padx=30,
     pady=15,
@@ -71,6 +81,8 @@ button_4 = Button(
 button_5 = Button(
     root,
     text='5',
+    bg="black",
+    fg= "white",
     font=('arial', 30),
     padx=30,
     pady=15,
@@ -79,6 +91,8 @@ button_5 = Button(
 button_6 = Button(
     root,
     text='6',
+    bg="black",
+    fg= "white",
     font=('arial', 30),
     padx=30,
     pady=15,
@@ -87,6 +101,8 @@ button_6 = Button(
 button_7 = Button(
     root,
     text='7',
+    bg="black",
+    fg= "white",
     font=('arial', 30),
     padx=30,
     pady=15,
@@ -95,6 +111,8 @@ button_7 = Button(
 button_8 = Button(
     root,
     text='8',
+    bg="black",
+    fg= "white",
     font=('arial', 30),
     padx=30,
     pady=15,
@@ -104,6 +122,8 @@ button_8 = Button(
 button_9 = Button(
     root,
     text='9',
+    bg="black",
+    fg= "white",
     font=('arial', 30),
     padx=30,
     pady=15,
@@ -112,6 +132,8 @@ button_9 = Button(
 button_0 = Button(
     root,
     text='0',
+    bg="black",
+    fg= "white",
     font=('arial', 30),
     padx=30,
     pady=15,
@@ -122,6 +144,8 @@ button_add = Button(
     root,
     text='+',
     padx=30,
+    bg="black",
+    fg= "white",
     pady=15,
     font=('arial', 30),
     command=lambda : press('+'),
@@ -130,7 +154,9 @@ button_equal = Button(
     root,
     text='=',
     padx=30,
-    pady=70,
+    pady=65,
+    bg="black",
+    fg= "white",
     font=('arial', 30),
     command=button_equal,
     )
@@ -138,6 +164,8 @@ button_sub = Button(
     root,
     text='-',
     padx=34,
+    bg="black",
+    fg= "white",
     pady=15,
     font=('arial', 30),
     command=lambda : press('-'),
@@ -146,6 +174,8 @@ button_mul = Button(
     root,
     text='*',
     padx=33,
+    bg="black",
+    fg= "white",
     pady=15,
     font=('arial', 30),
     command=lambda : press('*'),
@@ -154,6 +184,8 @@ button_div = Button(
     root,
     text='/',
     padx=35,
+    bg="black",
+    fg= "white",
     pady=15,
     font=('arial', 30),
     command=lambda : press('/'),
@@ -162,6 +194,8 @@ button_exp = Button(
     root,
     text='^',
     padx=31,
+    bg="black",
+    fg= "white",
     pady=15,
     font=('arial', 30),
     command=lambda : press('**'),
@@ -169,8 +203,10 @@ button_exp = Button(
 button_clr = Button(
     root,
     text='AC',
-    padx=110,
+    padx=80,
     pady=20,
+    bg="black",
+    fg= "white",
     font=('arial', 25),
     command=clear_but,
     )
@@ -178,6 +214,8 @@ button_mod = Button(
     root,
     text='MOD',
     padx=15,
+    bg="black",
+    fg= "white",
     pady=25,
     font=('arial', 20),
     command=lambda:press('%'),
