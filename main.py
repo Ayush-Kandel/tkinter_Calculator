@@ -1,11 +1,28 @@
 from tkinter import *
 
 # displays string in entry
-from PIL import ImageTk, Image
 
-def press(number):
+root = Tk()
+root.configure(bg='black')
+
+root.title('Basic Calculator')   # defining the title of the project
+root.iconbitmap('calculator.ico') # to give  the icon
+
+#defining the entry
+e = Entry(root, width=30, borderwidth=2, font=('arial', 20), bg='black', fg='cyan')
+e.grid(
+    row=0,
+    column=0,
+    columnspan=5,
+    padx=10,
+    pady=10,
+    ipady=5.5,
+    )
+
+
+def press(number):       #to display the value that is pressed
     current = e.get()
-    e.delete(0, END)
+    e.delete(0, END)  #index 0 dekhi end sammam ko read garcha
     e.insert(0, str(current) + str(number)) # adding two strings
 
 
@@ -17,26 +34,8 @@ def button_equal():
     e.delete(0, END)  # delete the value in entry
     e.insert(0, total)  # inserts the value in entry
 
-
-
 def clear_but():
     e.delete(0, END)  #clears the entry in the screen
-
-
-root = Tk()
-root.configure(bg='black')
-root.title('Basic Calculator')
-
-e = Entry(root, width=30, borderwidth=2, font=('arial', 20), bg='black', fg='cyan')
-e.grid(
-    row=0,
-    column=0,
-    columnspan=5,
-    padx=10,
-    pady=10,
-    ipady=5.5,
-    )
-
 #Buttons
 button_1 = Button(
     root,
