@@ -22,7 +22,7 @@ e.grid(
 
 def press(number):       #to display the value that is pressed
     current = e.get()
-    e.delete(0, END)  #index 0 dekhi end sammam ko read garcha
+    e.delete(0, END)
     e.insert(0, str(current) + str(number)) # adding two strings
 
 
@@ -30,7 +30,7 @@ def press(number):       #to display the value that is pressed
 
 def button_equal():
     cal = str(e.get())  # store value of entry in cal
-    total = eval(cal)  # runs the python which is passed as an argument
+    total = eval(cal)  # runs the program which is passed in string
     e.delete(0, END)  # delete the value in entry
     e.insert(0, total)  # inserts the value in entry
 
